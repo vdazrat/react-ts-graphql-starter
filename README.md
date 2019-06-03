@@ -7,3 +7,9 @@
 - classnames
 - react router configs(from my github)
 - Absolute Path resolution
+
+## Run the server with
+> yarn start
+
+## Run storybook
+> yarn run storybook
