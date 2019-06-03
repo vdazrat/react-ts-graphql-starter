@@ -1,4 +1,4 @@
-** React starter kit with storybook **
+# React starter kit with storybook
 - Storybook
 - es7 decorators
 - react-css-themr
