@@ -1,3 +1,4 @@
 import React from 'react';
+import Sidebar from 'components/Sidebar'
 
-export default () => <div>Welcome to your starter App!</div>;
+export default () => <div style={{ height: '100vh'}}><Sidebar /></div>;
