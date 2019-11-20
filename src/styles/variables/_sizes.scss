@@ -1,0 +1,30 @@
+// global variables
+// size and margin
+$page-max-width: 1440px;
+$header-height: 64px;
+$header-offset: 180px;
+$container-width: 89.125rem;
+$container-side-margin: 6rem;
+$header-width: 940px;
+$login-width: 400px;
+$dashboard-marginleft: 10px;
+$indent-default: -9999px;
+$zindex-max: 9999;
+$spacing-base: 8px;
+$container-margin: 2rem 12rem 0 12rem;
+
+// border
+$border-radius-default: 3px;
+
+// Screen size breakpoints
+$mobile-bp: 768px;
+$viewport-medium: 768px;
+
+$tab-content-offset: 56px;
+$sidebar-top-offset: 64px;
+
+// avatar
+$avatar-xs: 24px;
+$avatar-s: 24px;
+$avatar-m: 32px;
+$avatar-l: 40px;

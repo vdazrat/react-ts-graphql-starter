@@ -1,8 +1,8 @@
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 
-const nodeModulesPath = path.join(__dirname, '../node_modules');
-const srcPath = path.resolve(__dirname, '../src');
+const nodeModulesPath = path.join(__dirname, '../../node_modules');
+const srcPath = path.resolve(__dirname, '../../src');
 
 const moduleRules = [
   {
@@ -52,6 +52,16 @@ module.exports = async ({ config, mode }) => {
     modules: [nodeModulesPath, srcPath],
   };
   config.module.rules.push.apply(config.module.rules, moduleRules);
+
+  config.module.rules.push({
+    test: /\.(ts|tsx)$/,
+    use: [
+      {
+        loader: require.resolve('awesome-typescript-loader'),
+      },
+    ],
+  });
+  config.resolve.extensions.push('.ts', '.tsx');
 
   return config;
 };

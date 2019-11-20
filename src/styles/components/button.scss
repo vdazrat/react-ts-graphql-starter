@@ -1,0 +1,249 @@
+// sass-lint:disable variable-for-property
+$button-negative-color: $warning;
+$button-neutral-color: $black;
+$button-white-color: #FFF;
+
+@mixin buttonLink($theme: 'default') {
+    background: none;
+    border: none;
+    color: $primary;
+    cursor: pointer;
+    font-family: $fontFamily;
+    font-size: 14px;
+    font-weight: 500;
+    fill: $primary;
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+    min-width: 0;
+    text-decoration: none;
+
+    &:hover {
+        color: $primaryDark;
+        fill: $primaryDark;
+        text-decoration: underline;
+        background: none;
+    }
+
+    &.disabled, &[disabled] {
+        cursor: initial;
+        color: $greyLight;
+        fill: $greyLight;
+
+        &:hover {
+            color: $greyLight;
+            fill: $greyLight;
+            text-decoration: none;
+        }
+    }
+
+    .fa {
+        margin-right: 4px;
+    }
+
+    @if ($theme == 'warning') {
+        color: $warning;
+        fill: $warning;
+
+        &:hover {
+            color: $warningDark;
+            fill: $warningDark;
+        }
+    }
+
+    @if ($theme == 'secondary') {
+        color: $greyMedium;
+        fill: $greyMedium;
+
+        &:hover {
+            color: $greyDark;
+            fill: $greyDark;
+        }
+    }
+}
+
+@mixin solidButton($theme: 'primary', $size: 'default') {
+    align-items: center;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    justify-content: center;
+    line-height: 1.6;
+    outline: none;
+    text-decoration: none;
+    text-shadow: none;
+    transition: background-color 100ms, color 100ms;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:focus, &:active {
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    &.disabled, &[disabled] {
+        background-color: $greyLightest;
+        color: $greyLight;
+        fill: $greyLight;
+
+        &:hover {
+            background-color: $greyLightest;
+            color: $greyLight;
+            fill: $greyLight;
+        }
+    }
+
+    @if ($theme == 'primary') {
+        background-color: $primary;
+        border: none;
+        color: $white;
+        fill: $white;
+
+        &:hover {
+            color: $white;
+            fill: $white;
+            background-color: $primaryDark;
+        }
+    }
+
+    @if ($theme == 'primaryLightest') {
+        background-color: $primaryLightest;
+        border: none;
+        color: $primary;
+        fill: $primary;
+
+        &:hover {
+            color: $primary;
+            fill: $primary;
+            background-color: $primaryLight;
+        }
+    }
+
+    @if ($theme == 'secondary') {
+        background-color: $white;
+        border: 1px solid $greyLightest;
+        color: $greyDark;
+        fill: $greyDark;
+
+        &:hover {
+            background-color: $greyBackground;
+        }
+    }
+
+    @if ($theme == 'warning') {
+        background-color: $warning;
+        border: none;
+        color: $white;
+        fill: $white;
+
+        &:hover {
+            background-color: $warningDark;
+        }
+    }
+
+    @if ($size == 'small') {
+        min-width: 64px;
+        min-height: 32px;
+        padding: $spacing-base $spacing-base * 1.5;
+        line-height: 15px;
+    }
+
+    @if ($size == 'default') {
+        min-width: 80px;
+        min-height: 40px;
+        padding: $spacing-base $spacing-base * 2;
+    }
+
+    @if ($size == 'large') {
+        min-width: 96px;
+        min-height: 48px;
+        padding: $spacing-base $spacing-base * 3;
+    }
+}
+
+@mixin button-colors($bg, $fg) {
+    background-color: $bg;
+    color: $fg;
+
+    &:hover {
+        background-color: darken($bg, 2.5%);
+    }
+
+    &:active {
+        background-color: darken($bg, 5%);
+    }
+
+    @at-root #{&}--inverted {
+        background-color: $fg;
+        color: $bg;
+        border: 1px solid;
+
+        &:hover {
+            background-color: darken($bg, 2.5%);
+            color: $fg;
+        }
+
+        &:active {
+            background-color: darken($bg, 5%);
+        }
+
+        &[disabled='disabled'] {
+            background-color: lighten($fg, 10%);
+            color: lighten($bg, 10%);
+            cursor: not-allowed;
+        }
+    }
+
+    &[disabled='disabled'] {
+        background-color: lighten($bg, 10%);
+        color: lighten($fg, 10%);
+        cursor: not-allowed;
+    }
+}
+
+a.button--link,
+button.button {
+    @include buttonLink;
+}
+
+button.button--positive {
+    @include solidButton();
+}
+
+button.button--negative {
+    @include solidButton('warning');
+}
+
+button.button--neutral {
+    @include solidButton('secondary');
+}
+
+a.button--link,
+button.button--link {
+    @include buttonLink;
+}
+
+a.button--link:hover,
+button.button--link:hover {
+    text-decoration: underline;
+    color: darken($primary, 10%);
+}
+
+a.button--link:hover[disabled='disabled'],
+button.button--link[disabled='disabled'] {
+    text-decoration: none;
+    color: lighten($primary, 10%);
+    cursor: not-allowed;
+}
+
+.button__icon:before {
+    margin-left: 0;
+}

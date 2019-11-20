@@ -1,0 +1,23 @@
+@mixin disabledTextBox {
+    display: flex;
+    width: 26rem;
+    height: 2.5rem;
+    margin: 1rem 0 2rem 1.3rem;
+    padding: 0 1rem;
+    font-weight: normal;
+    background: $greyLightest;
+    color: $greyMedium;
+    border: solid 1px $greyLight;
+    border-radius: $border-radius-default;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+@mixin disabledTextBoxLock {
+    @include disabledTextBox();
+
+    .icon {
+        fill: $greyMedium;
+    }
+}

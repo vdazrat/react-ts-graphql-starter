@@ -1,0 +1,146 @@
+$fontFamily: 'Montserrat', sans-serif;
+
+$fontWeightBold: 700;
+$fontWeightNormal: 400;
+
+@mixin headerCommon {
+    font-family: $fontFamily;
+    font-weight: $fontWeightBold;
+    line-height: normal;
+}
+
+@mixin header1 {
+    @include headerCommon();
+    font-size: 26px;
+}
+
+@mixin header2 {
+    @include headerCommon();
+    font-size: 18px;
+}
+
+@mixin header3 {
+    @include headerCommon();
+    font-size: 14px;
+}
+
+@mixin header4 {
+    @include headerCommon();
+    font-size: 12px;
+}
+
+@mixin body {
+    font-family: $fontFamily;
+    font-weight: $fontWeightNormal;
+    font-size: 0.875rem;
+    line-height: normal;
+}
+
+@mixin bodyBold {
+    font-family: $fontFamily;
+    font-weight: $fontWeightBold;
+    font-size: 14px;
+    line-height: normal;
+}
+
+@mixin paragraph {
+    font-family: $fontFamily;
+    font-weight: $fontWeightNormal;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+$type-body-font-family: 'Montserrat', 'sans-serif';
+$type-title-font-family: 'Montserrat', 'sans-serif';
+
+$type-title-weight: 700;
+$type-body-weight: 400;
+$type-body-weight-bold: 500;
+
+$type-titleXL-font-size: 1.625rem;
+$type-titleXL-line-height: 1.75rem;
+
+$type-titleL-font-size: 1.25rem;
+$type-titleL-line-height: 1.5rem;
+
+$type-titleM-font-size: 1.125rem;
+$type-titleM-line-height: 1.3125rem;
+
+$type-titleS-font-size: 0.875rem;
+$type-titleS-line-height: 1rem;
+
+$type-titleXS-font-size: 0.75rem;
+$type-titleXS-line-height: 0.875rem;
+
+$type-bodyM-font-size: 0.875rem;
+$type-bodyM-line-height: 1.0625rem;
+
+$type-bodyS-font-size: 0.8125rem;
+$type-bodyS-line-height: 0.9375rem;
+
+$type-bodyXS-font-size: 0.625rem;
+$type-bodyXS-line-height: 0.75rem;
+
+@mixin titleXL {
+    font-family: $type-title-font-family;
+    font-weight: $type-title-weight;
+    font-size: $type-titleXL-font-size;
+    line-height: $type-titleXL-line-height;
+    font-style: normal;
+}
+
+@mixin titleL {
+    font-family: $type-title-font-family;
+    font-weight: $type-title-weight;
+    font-size: $type-titleL-font-size;
+    line-height: $type-titleL-line-height;
+    font-style: normal;
+}
+
+@mixin titleM {
+    font-family: $type-title-font-family;
+    font-weight: $type-title-weight;
+    font-size: $type-titleM-font-size;
+    line-height: $type-titleM-line-height;
+    font-style: normal;
+}
+
+@mixin titleS {
+    font-family: $type-title-font-family;
+    font-weight: $type-title-weight;
+    font-size: $type-titleS-font-size;
+    line-height: $type-titleS-line-height;
+    font-style: normal;
+}
+
+@mixin titleXS {
+    font-family: $type-title-font-family;
+    font-weight: $type-title-weight;
+    font-size: $type-titleXS-font-size;
+    line-height: $type-titleXS-line-height;
+    font-style: normal;
+}
+
+@mixin bodyM {
+    font-family: $type-body-font-family;
+    font-weight: $type-body-weight;
+    font-size: $type-bodyM-font-size;
+    line-height: $type-bodyM-line-height;
+    font-style: normal;
+}
+
+@mixin bodyS {
+    font-family: $type-body-font-family;
+    font-weight: $type-body-weight;
+    font-size: $type-bodyS-font-size;
+    line-height: $type-bodyS-line-height;
+    font-style: normal;
+}
+
+@mixin bodyXS {
+    font-family: $type-body-font-family;
+    font-weight: $type-body-weight;
+    font-size: $type-bodyXS-font-size;
+    line-height: $type-bodyXS-line-height;
+    font-style: normal;
+}

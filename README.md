@@ -1,4 +1,6 @@
 # React starter kit with storybook
+
+- Typescript
 - Storybook
 - es7 decorators
 - react-css-themr
@@ -9,7 +11,9 @@
 - Absolute Path resolution
 
 ## Run the server with
+
 > yarn start
 
 ## Run storybook
+
 > yarn run storybook
